@@ -73,7 +73,7 @@ public class EditProfile extends AppCompatActivity {
 
     private final int REQUEST_LOKASI = 1, REQUEST_TAKE_PHOTO = 2, REQUEST_GALLERY = 3;
     final int MY_PERMISSIONS_REQUEST_WRITE_STORAGE = 4;
-    String API_GOOGLE = "AIzaSyAW5rrdltZCEQNnXPbaSNwwZKuER1QqovI";
+    String API_GOOGLE = "YOUR_PLACE_API";
 
     SessionManager sm;
     ProgressDialog pd;
