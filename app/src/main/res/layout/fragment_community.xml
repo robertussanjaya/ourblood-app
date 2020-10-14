@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="1dp"
+                app:cardCornerRadius="2dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textBlood4Life"
+                        android:text="Blood4Life Indonesia"
+                        android:layout_margin="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"/>
+
+                    <ImageView
+                        android:id="@+id/gmbrBlood4Life"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_below="@+id/textBlood4Life"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/blood4life_twitter"/>
+
+                    <TextView
+                        android:id="@+id/textBlood4LifeDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_below="@+id/gmbrBlood4Life"
+                        android:textColor="@android:color/black"
+                        android:layout_margin="10dp"
+                        android:text="Blood4Life "/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="1dp"
+                app:cardCornerRadius="2dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_below="@+id/card1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textUTD"
+                        android:text="UTD PMI Provinsi DKI Jakarta"
+                        android:layout_margin="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"/>
+
+                    <ImageView
+                        android:id="@+id/gmbrUTD"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_below="@+id/textUTD"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/utd_jakarta"/>
+
+                    <TextView
+                        android:id="@+id/textUTDdesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_below="@+id/gmbrUTD"
+                        android:textColor="@android:color/black"
+                        android:layout_margin="10dp"
+                        android:text="UTD PMI Jakarta"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

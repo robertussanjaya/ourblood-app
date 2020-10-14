@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarEditProfil"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#8f3607"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:text="Foto Profil"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoProfil"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#FF000000"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:id="@+id/bukaGallery"
+                    android:text="Upload"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:paddingHorizontal="8dp"
+                    android:src="@drawable/ic_gallery"/>
+
+                <ImageButton
+                    android:id="@+id/bukaKamera"
+                    android:text="Upload"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:paddingHorizontal="8dp"
+                    android:src="@drawable/ic_camera"
+                    android:onClick="btnKamera"/>
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editUsername"
+                android:hint="Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="@drawable/edittext"
+                android:drawableLeft="@drawable/ic_username"
+                android:drawablePadding="10dp"/>
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:hint="Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="@drawable/edittext"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:text="+62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext"
+                    android:drawableLeft="@drawable/ic_hp"
+                    android:drawablePadding="10dp"/>
+
+                <EditText
+                    android:id="@+id/editTelepon"
+                    android:hint="Nomor Telepon"
+                    android:inputType="phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editAlamat"
+                android:hint="Alamat/Domisili Tempat Tinggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="none"
+                android:focusable="false"
+                android:padding="10dp"
+                android:background="@drawable/edittext"
+                android:drawableLeft="@drawable/ic_lokasi"
+                android:drawablePadding="10dp"/>
+
+            <TextView
+                android:text="Ubah Password"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/editOldPassword"
+                android:hint="Password Lama"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="@drawable/edittext"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="10dp"/>
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:hint="Password Baru"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="@drawable/edittext"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp">
+
+                <Button
+                    android:id="@+id/btnSimpan"
+                    android:text="Simpan Perubahan"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/button"
+                    android:foreground="?attr/selectableItemBackground"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

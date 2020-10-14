@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReqDonorActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarRequest"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#8f3607"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etPasien"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Nama Pasien"
+                    android:padding="8dp"
+                    android:background="@drawable/edittext"
+                    android:drawableLeft="@drawable/ic_username"
+                    android:drawablePadding="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+62"
+                    android:layout_marginRight="5dp"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:padding="8dp"
+                    android:background="@drawable/edittext"
+                    android:drawableLeft="@drawable/ic_hp"
+                    android:drawablePadding="10dp"/>
+                <EditText
+                    android:id="@+id/etHandphone"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.50"
+                    android:layout_height="wrap_content"
+                    android:hint="No Handphone"
+                    android:inputType="phone"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etLokasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Lokasi Donor"
+                    android:minLines="2"
+                    android:padding="8dp"
+                    android:background="@drawable/edittext"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:drawableLeft="@drawable/ic_lokasi"
+                    android:drawablePadding="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/etJumlah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Jumlah"
+                    android:inputType="numberDecimal"
+                    android:padding="8dp"
+                    android:background="@drawable/edittext"
+                    android:drawableLeft="@drawable/ic_pendonor"
+                    android:drawablePadding="10dp"/>
+
+                <TextView
+                    android:textSize="16dp"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="/ Pendonor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_blood"
+                        android:layout_marginRight="5dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Golongan Darah"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@android:color/black"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spGolDar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/gol_darah"
+                    android:background="@drawable/edittext"
+                    android:padding="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_rh"
+                        android:layout_marginRight="5dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rhesus"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@android:color/black"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rPositive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="checkedButton"
+                        android:text="Positif" />
+
+                    <RadioButton
+                        android:id="@+id/rNegative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="checkedButton"
+                        android:text="Negatif" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_info"
+                        android:layout_marginRight="5dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Informasi Tambahan (Opsional)"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@android:color/black"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etKet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Keterangan"
+                    android:minLines="2"
+                    android:paddingLeft="20dp"
+                    android:background="@drawable/edittext" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Foto Formulir Pengantar"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:background="@drawable/edittext"
+                            android:padding="3dp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageButton
+                        android:id="@+id/btnGallery"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        android:src="@drawable/ic_gallery"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKamera"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        android:src="@drawable/ic_camera"
+                        android:onClick="openCamera"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        <Button
+            android:id="@+id/btnKirim"
+            android:text="Kirim Permintaan"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:foreground="?attr/selectableItemBackground"/>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

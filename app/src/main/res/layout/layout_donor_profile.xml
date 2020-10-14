@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#8f3607"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/lineAtas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/an"
+                android:text="A/N: "
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/namaPasienProf"
+                android:text="Nama Pasien"
+                android:layout_toRightOf="@+id/an"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                android:layout_weight="0.30"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/deleteDonor"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_delete"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:layout_toLeftOf="@+id/editDonor"/>
+
+            <ImageView
+                android:id="@+id/editDonor"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_edit"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignEnd="@+id/namaPasienProf" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearDonor"
+            android:layout_below="@+id/lineAtas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-8dp">
+
+            <TextView
+                android:id="@+id/tvGolProf"
+                android:layout_below="@+id/namaPasienProf"
+                android:text="Gol. Dar: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/golDarahProf"
+                android:text="ABO"
+                android:layout_marginRight="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/rhProf"
+                android:text="Rhesus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearDonor">
+            <TextView
+                android:id="@+id/lokasiProf"
+                android:layout_below="@+id/linearDonor"
+                android:text="Lokasi"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_width="0dp"
+                android:layout_weight="0.30"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tanggalProf"
+                android:layout_below="@+id/linearDonor"
+                android:text="tanggal"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

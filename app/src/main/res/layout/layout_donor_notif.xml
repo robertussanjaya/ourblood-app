@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/garis"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#8f3607"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/a.n"
+            android:text="A/N: "
+            android:textSize="14sp"
+
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/namaPasienNotif"
+            android:text="Nama Pasien"
+            android:layout_toRightOf="@+id/a.n"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/linearNotif"
+            android:layout_below="@+id/namaPasienNotif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvGolNotif"
+                android:layout_below="@+id/namaPasienNotif"
+                android:text="Gol. Dar: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/golDarahNotif"
+                android:text="ABO"
+                android:layout_marginRight="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/rhNotif"
+                android:text="Rhesus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=" - "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/jmlNotif"
+                android:text="Jml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=" Pendonor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearNotif"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lokasiNotif"
+                android:text="Lokasi"
+                android:layout_width="0dp"
+                android:layout_weight="0.60"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"/>
+
+            <TextView
+                android:id="@+id/tanggalNotif"
+                android:layout_below="@+id/linearNotif"
+                android:text="tanggal"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

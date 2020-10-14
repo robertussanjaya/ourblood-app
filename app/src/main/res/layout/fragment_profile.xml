@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:text="Hi, "
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txtUsername"
+                    android:text="Username"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="5dp"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#FF000000"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/linear"/>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/profile_image">
+
+                <TextView
+                    android:id="@+id/txtGoldar"
+                    android:text="GolDar"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text=" - "
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txtRH"
+                    android:text="Rhesus"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/linear2"
+            android:layout_centerInParent="true">
+
+                <Button
+                    android:id="@+id/btnEditProfile"
+                    android:text="Ubah Profil"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"/>
+                <Button
+                    android:id="@+id/logout"
+                    android:text="Log Out"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear3"
+            android:layout_margin="5dp"
+            android:background="@drawable/edittext">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                                <TextView
+                                    android:text="Permintaan Donor - "
+                                    android:textColor="@android:color/black"
+                                    android:textStyle="bold"
+                                    android:fontFamily="sans-serif-condensed-light"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:text="By "
+                                    android:textColor="@android:color/black"
+                                    android:textStyle="bold"
+                                    android:fontFamily="sans-serif-condensed-light"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:id="@+id/namaUser"
+                                    android:text="namaUser"
+                                    android:textColor="@android:color/black"
+                                    android:textStyle="bold"
+                                    android:fontFamily="sans-serif-condensed-light"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:orientation="vertical">
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerDonorProfile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginVertical="5dp"/>
+
+                                <RelativeLayout
+                                    android:id="@+id/requestKosong"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:clickable="true">
+                                        <TextView
+                                            android:layout_centerInParent="true"
+                                            android:text="Permintaan donor belum dibuat"
+                                            android:textSize="20sp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"/>
+                                </RelativeLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                                <TextView
+                                    android:text="Event - "
+                                    android:textColor="@android:color/black"
+                                    android:textStyle="bold"
+                                    android:fontFamily="sans-serif-condensed-light"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:text="By "
+                                    android:textColor="@android:color/black"
+                                    android:textStyle="bold"
+                                    android:fontFamily="sans-serif-condensed-light"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:id="@+id/namaUser2"
+                                    android:text="namaUser"
+                                    android:textColor="@android:color/black"
+                                    android:textStyle="bold"
+                                    android:fontFamily="sans-serif-condensed-light"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:orientation="vertical">
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerEventProfile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+
+                                <RelativeLayout
+                                    android:id="@+id/eventKosong"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:clickable="true">
+                                        <TextView
+                                            android:layout_centerInParent="true"
+                                            android:text="Event belum dibuat"
+                                            android:textSize="20sp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"/>
+                                </RelativeLayout>
+                        </RelativeLayout>
+                </LinearLayout>
+        </ScrollView>
+
+</RelativeLayout>

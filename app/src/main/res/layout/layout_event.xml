@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/eventCard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/fotoEvent"
+            android:layout_width="115dp"
+            android:layout_height="110dp"
+            android:layout_margin="5dp"
+            android:padding="2dp"
+            android:background="@drawable/shape"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/namaEvent"
+            android:text="Nama Event"
+            android:textSize="16sp"
+            android:paddingTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@+id/fotoEvent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lokasiLinear"
+            android:layout_toRightOf="@+id/fotoEvent"
+            android:layout_below="@+id/namaEvent"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp" >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_lokasi"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:id="@+id/lokasiEvent"
+                android:text="Lokasi"
+                android:paddingTop="1dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_gravity="top"
+                android:includeFontPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/waktu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/fotoEvent"
+            android:layout_below="@+id/lokasiLinear"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_date"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="5dp"/>
+                <TextView
+                    android:id="@+id/tanggalEvent"
+                    android:text="DD MM YYYY"
+                    android:paddingTop="1dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_jam"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/waktuMulai"
+                    android:text="00.00"
+                    android:paddingTop="1dp"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:text="-"
+                    android:paddingTop="1dp"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:id="@+id/waktuSelesai"
+                    android:text="00.00"
+                    android:paddingTop="1dp"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp">
+
+                <ImageView
+                    android:id="@+id/ic_status"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

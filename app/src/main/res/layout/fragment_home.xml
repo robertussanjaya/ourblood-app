@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Kebutuhan Pendonor"
+            android:textSize="24sp"
+            android:autoSizeTextType="uniform"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
+                android:paddingVertical="5dp"
+                android:layout_marginRight="5dp">
+                <Spinner
+                    android:id="@+id/cariGolDar"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.40"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/goldar_search"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
+                android:paddingVertical="5dp">
+                <Spinner
+                    android:id="@+id/cariRH"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.40"
+                    android:entries="@array/rhesus"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerDonor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDonor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#8f3607"
+        android:src="@drawable/ic_add"/>
+
+</RelativeLayout>

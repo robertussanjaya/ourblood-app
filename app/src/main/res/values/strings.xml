@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">Our Blood</string>
+
+    <string-array name="gol_darah">
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+
+    <string-array name="goldar_search">
+        <item>-GolDar-</item>
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+
+    <string-array name="rhesus">
+        <item>-Rhesus-</item>
+        <item>Positif</item>
+        <item>Negatif</item>
+    </string-array>
+
+</resources>

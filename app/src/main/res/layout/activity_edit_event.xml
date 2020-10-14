@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditEvent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarEditEvent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#8f3607"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:id="@+id/linearB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <EditText
+                android:id="@+id/editJudulEvent"
+                android:hint="Nama Event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@drawable/edittext"
+                android:drawableLeft="@drawable/ic_judul_event"
+                android:drawablePadding="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/editLokasiEvent"
+                    android:hint="Lokasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="2"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:padding="8dp"
+                    android:background="@drawable/edittext"
+                    android:drawableLeft="@drawable/ic_lokasi"
+                    android:drawablePadding="10dp"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTgl"
+                android:hint="Tanggal Event"
+                android:inputType="none"
+                android:focusable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:background="@drawable/edittext"
+                android:drawableLeft="@drawable/ic_date"
+                android:drawablePadding="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_jam"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:text="Waktu Event "
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <EditText
+                    android:id="@+id/editWaktuMulai"
+                    android:hint="Mulai"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext"/>
+
+                <TextView
+                    android:text=" s/d "
+                    android:textSize="18sp"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/editWaktuSelesai"
+                    android:hint="Selesai"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_info"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="Informasi Event (Opsional)"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editKetEvent"
+                android:hint="Informasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:minLines="3"
+                android:padding="8dp"
+                android:background="@drawable/edittext"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="Upload Foto / Poster Event"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+                    <ImageView
+                        android:id="@+id/imageEditEvent"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:padding="3dp"
+                        android:background="@drawable/edittext"/>
+
+                    <ImageButton
+                        android:id="@+id/btGalleryEdit"
+                        android:text="Upload"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        android:paddingHorizontal="8dp"
+                        android:src="@drawable/ic_gallery"/>
+
+                    <ImageButton
+                        android:id="@+id/btKameraEdit"
+                        android:text="Upload"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        android:paddingHorizontal="8dp"
+                        android:src="@drawable/ic_camera"
+                        android:onClick="bukaKameraEdit"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnEditEvent"
+                android:text="Simpan Perubahan Event"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:foreground="?attr/selectableItemBackground"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
